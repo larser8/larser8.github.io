@@ -1,30 +1,32 @@
 .hero{
-	background-color: $light-gray;
+	background-color: #F5F5F5;
 	padding-top: 47px;
-	padding-bottom: 52px;
+	padding-bottom: 63px;
 	.container{
 		position: relative;
+		max-width: 940px;
 		&::before{
 			content: "";
 			position: absolute;
 			width: 46px;
 			height: 10px;
-			bottom: -10%;
-			right: 0;
+			bottom: -69px;
+			right: 64px;
 			transform: rotate(-45deg);
-			background-color: $dark-gray;
+			background-color: #C4C4C4;
 		}
 	}
 }
 
 .hero__info{
 	display: flex;
-	margin-top: 64px;
+	margin-top: -58px;
 }
 
 .hero__content{
-	max-width: 350px;
-	margin-top: 96px;
+	max-width: 440px;
+	margin-top: 48px;
+	padding-bottom: 77px;
 }
 
 .hero__title{
@@ -32,6 +34,8 @@
 	font-size: 48px;
 	line-height: 52px;
 	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 20px;
 }
 
 .hero__text{
@@ -40,7 +44,7 @@
 	line-height: 25px;
 	font-weight: 400;
 	max-width: 332px;
-	padding: 22px 0;
+	margin-bottom: 37px;
 }
 
 .hero__button{
@@ -66,12 +70,11 @@
 .hero__list-info{
 	font-family: 'Play';
 	max-width: 100px;
-	padding-right: 75px;
 }
 
 
 .hero__icon{
-	margin-right: 20px;
+	margin-right: 10px;
 }
  
 .hero__wrapper{
@@ -79,44 +82,66 @@
 }
 
 .hero__logo{
-	margin-left: 85px;
 }
 
 .hero__info-item{
 	display: flex;
 	align-items: center;
+	margin-right: 25px;
 }
 
 .hero__dots{
-	margin-top: 106px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0;
+	margin: 0;
 }
 
 .button__dots{
 	font-size: 0;
-	width: 9px;
-	height: 9px;
-	background-color: #332208;
+	width: 6px;
+	height: 6px;
+	background: rgba(#292929, .6);
 	border: none;
 	border-radius: 50%;
 	padding: 0;
 	margin: 0 auto;
 	cursor: pointer;
 	position: relative;
+
 }
 
 
 .hero__dots-item{
-	background: #fff;
-  &.active{
-		content: "";
-		width: 16px;
-		height: 16px;
-		border-radius: 50%;
-		background: $red;
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
+	margin-bottom: 5px;
+	width: 16px;
+	height: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	&.active{
+		.button__dots{
+				background: #E01F3D;
+				position: relative;
+				&::before{
+					content: '';
+					position: absolute;
+					width: 16px;
+					height: 16px;
+					border-radius: 50%;
+					border: 1px solid #E01F3D;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+		}
 	}
 }
 
