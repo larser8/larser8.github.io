@@ -4,11 +4,14 @@
 		&::before{
 			content: "";
 			position: absolute;
-			
-			bottom: -9%;
-			right: 94%;
-			transform: rotate(-45deg);
-			background-color: $dark-gray;
+			width: 34px;
+			height: 34px;
+			bottom: -69px;
+			left: -88px;
+			background-image: url('../images/tringle.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
 		}
 	}
 }

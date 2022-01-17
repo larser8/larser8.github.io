@@ -8,12 +8,14 @@
 		&::before{
 			content: "";
 			position: absolute;
-			width: 46px;
-			height: 10px;
-			bottom: -69px;
+			width: 45px;
+			height: 45px;
+			bottom: -85px;
 			right: 64px;
-			transform: rotate(-45deg);
-			background-color: #C4C4C4;
+			background-image: url('../images/rectangle.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
 		}
 	}
 }

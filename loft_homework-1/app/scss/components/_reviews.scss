@@ -1,6 +1,5 @@
 .section__reviews{
-	height: 100vh;
-	  min-height: 650px;
+		padding: 50px 0;
 	  display: flex;
 	  flex-direction: column;
 	  justify-content: center;
@@ -12,10 +11,12 @@
 			  border-radius: 50%;
 			  width: 35px;
 			  height: 35px;
-			  bottom: -9%;
-			  right: 94%;
-			  transform: rotate(-45deg);
-			  background-color: $dark-gray;
+			  bottom: -70px;
+			  left: 0;
+				background-image: url('../images/circle.svg');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
 		  }
 	  }
   }
@@ -27,8 +28,6 @@
 	display: flex;
 	margin-bottom: 32px;
 	background: #F8FAF9;
-	max-width: 940px;
-	max-height: 398px;
 	overflow: hidden;
 	position: relative;
 
