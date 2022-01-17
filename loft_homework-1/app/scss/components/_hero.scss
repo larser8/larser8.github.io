@@ -1,0 +1,126 @@
+.hero{
+	background-color: $light-gray;
+	padding-top: 47px;
+	padding-bottom: 52px;
+	.container{
+		position: relative;
+		&::before{
+			content: "";
+			position: absolute;
+			width: 46px;
+			height: 10px;
+			bottom: -10%;
+			right: 0;
+			transform: rotate(-45deg);
+			background-color: $dark-gray;
+		}
+	}
+}
+
+.hero__info{
+	display: flex;
+	margin-top: 64px;
+}
+
+.hero__content{
+	max-width: 350px;
+	margin-top: 96px;
+}
+
+.hero__title{
+	font-family: 'Play';
+	font-size: 48px;
+	line-height: 52px;
+	font-weight: 700;
+}
+
+.hero__text{
+	font-family: 'Alegreya Sans';
+	font-size: 21px;
+	line-height: 25px;
+	font-weight: 400;
+	max-width: 332px;
+	padding: 22px 0;
+}
+
+.hero__button{
+	padding: 21px 41px;
+	background-color: $red;
+	border-radius: 100px;
+	border: none;
+	color: $white;
+	font-family: 'Play';
+
+	&:hover{
+		background-color: $dark-gray;
+		transition: all .5s;
+		cursor: pointer;
+	}
+}
+
+.hero__list{
+	padding-left: 12px;
+	max-width: 100px;
+}
+
+.hero__list-info{
+	font-family: 'Play';
+	max-width: 100px;
+	padding-right: 75px;
+}
+
+
+.hero__icon{
+	margin-right: 20px;
+}
+ 
+.hero__wrapper{
+	display: flex;
+}
+
+.hero__logo{
+	margin-left: 85px;
+}
+
+.hero__info-item{
+	display: flex;
+	align-items: center;
+}
+
+.hero__dots{
+	margin-top: 106px;
+}
+
+.button__dots{
+	font-size: 0;
+	width: 9px;
+	height: 9px;
+	background-color: #332208;
+	border: none;
+	border-radius: 50%;
+	padding: 0;
+	margin: 0 auto;
+	cursor: pointer;
+	position: relative;
+}
+
+
+.hero__dots-item{
+	background: #fff;
+  &.active{
+		content: "";
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: $red;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+	}
+}
+
+
+
+
+

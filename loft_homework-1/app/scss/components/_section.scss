@@ -1,0 +1,23 @@
+.section{
+	.container{
+		position: relative;
+		&::before{
+			content: "";
+			position: absolute;
+			
+			bottom: -9%;
+			right: 94%;
+			transform: rotate(-45deg);
+			background-color: $dark-gray;
+		}
+	}
+}
+.section__title{
+	font-family: 'Play';
+	font-size: 36px;
+	line-height: 52px;
+	font-weight: 700;
+	margin-bottom: 50px;
+	text-align: center;
+	text-transform: uppercase;
+}

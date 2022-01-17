@@ -1,0 +1,122 @@
+.section__form{
+  background-image: url('/images/form-bg.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+  height: 652px;
+	width: 100%;
+	padding: 20px 0;
+}
+
+.section__title-form{
+  color: #fff;
+  text-align: center;
+  font-family: 'Play';
+  text-align: center;
+	padding-top: 68px;
+}
+
+.form{
+	display: flex;
+  margin-top: 100px;
+}
+
+.form__col{
+	flex: 1;
+	margin-right: 20px;
+
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.form__row{
+	display: flex;
+	margin-bottom: 18px;
+}
+
+.form__block{
+	flex: 1;
+	margin-right: 20px;
+
+
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.form__input{
+	width: 100%;
+	padding: 18px 0;
+  border-radius: 5px;
+  border: 3px solid ;
+
+
+	&--textarea{
+		height: 136px;
+		resize: none;
+	}
+
+	&:focus{
+		border-color: $red;
+		outline: none;
+	}
+}
+
+.form__title{
+  color: #fff;
+	font-family: 'Play';
+	font-size: 16px;
+	line-height: 19px;
+	font-weight: 400;
+}
+
+.radio__title{
+  color: #fff;
+}
+
+.form__controls{
+  display: flex;
+  flex-wrap: wrap;
+	margin: 16px 0;
+}
+
+.form__btn{
+	margin-top: 44px;
+}
+
+.form__button{
+	padding: 21px 41px;
+	background-color: $red;
+	border-radius: 100px;
+	border: none;
+	color: $white;
+	font-family: 'Play';
+
+	&:hover{
+		background-color: $dark-gray;
+		transition: all .5s;
+		cursor: pointer;
+	}
+
+	&--theme--red{
+		background: $red;
+		color: #fff;
+
+		&:hover{
+			background: #fff;
+			color: $red;
+		}
+	}
+
+	&--theme--transparent{
+		background: transparent;
+		color: #fff;
+		border: none;
+
+		&:hover{
+			color: $red;
+			background: transparent;
+		}
+	}
+}

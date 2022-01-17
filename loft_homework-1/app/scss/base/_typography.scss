@@ -1,0 +1,67 @@
+// Typography
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+
+.h {
+	font-family: $headings-font-family;
+	font-weight: bold;
+	line-height: 1.4;
+	color: $headings-color;
+}
+
+h1, .h1 {
+	font-size: $h1-font-size;
+	line-height: 1.1556;
+	@include media('>=tablet') {
+		font-size: 35px; // 35px/52px
+	}
+}
+
+h2, .h2 {
+	font-size: $h2-font-size; // 28px/32px
+	line-height: 1.1429;
+
+
+	hr + & {
+		padding-top: 10px;
+	}
+}
+
+h3, .h3 {
+	font-size: $h3-font-size; // 24px/28px
+	line-height: 1.1667;
+}
+
+h4, .h4 {
+	font-size: $h4-font-size; // 20px/28px
+
+}
+
+
+p {
+	
+
+	&.small {
+		
+	}
+}
+
+li{
+	list-style: none;
+}
+
+a {
+	// @include animate(color background opacity border-color box-shadow text-shadow);
+	color: $base-link-color;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: $base-text-color;
+	}
+}
+
