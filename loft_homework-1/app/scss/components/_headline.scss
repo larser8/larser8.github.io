@@ -1,9 +1,12 @@
 .headline{
-	margin-top: 103px;
+	
+	text-align: center;
 }
 
 .headline__title{
-  margin-bottom: 25px ;
+  margin-bottom: 18px;
+  font-size: 48px;
+  line-height: 52px;
 }
 
 .headline__subtitle{
@@ -12,6 +15,7 @@
 	font-size: 16px;
 	line-height: 19px;
 	font-weight: 400;
-	max-width: 466px;
-	margin: 62px auto;
+	max-width: 530px;
+	margin: 0 auto 62px;
+	
 }
