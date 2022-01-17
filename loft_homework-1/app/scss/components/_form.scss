@@ -33,6 +33,10 @@
 .form__row{
 	display: flex;
 	margin-bottom: 18px;
+
+	&:last-child{
+		margin: 0;
+	}
 }
 
 .form__block{

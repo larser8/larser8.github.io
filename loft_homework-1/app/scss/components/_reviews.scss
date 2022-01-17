@@ -92,15 +92,31 @@
 }
 
 .reviews__item{
+
 	margin-left: 6px;
+}
+
+.reviews__item:first-child{
+	margin: 0;
 }
 
 .reviews__avatar{
 	box-sizing: border-box;
+	border: 2px solid transparent;
+  
+	&.visit{
+		border-radius: 50%;
+		border: 5px solid $red;
+
+		&:hover{
+			border:	transparent;
+		}
+	}
+
+
 	&:hover{
 	border-radius: 50%;
 	border: 5px solid $red;
-	transition: all .3s;
 	max-width: 74px;
 	}
 }
