@@ -24,12 +24,21 @@
 	}
 }
 
+
 .radio__visible{
 	width: 26px;
 	height: 26px;
 	position: relative;
 	border-radius: 50%;
 	background: #fff;
+	margin-left: 22px;
+
+	&.radio--distance{
+		margin: 0;
+	}
+
+
+
 	&::before{
 		content: "";
 		width: 14px;

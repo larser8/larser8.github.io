@@ -2,6 +2,7 @@
 	background-color: #F5F5F5;
 	padding-top: 47px;
 	padding-bottom: 63px;
+	height: 100vh;
 	.container{
 		position: relative;
 		max-width: 940px;
@@ -10,7 +11,7 @@
 			position: absolute;
 			width: 45px;
 			height: 45px;
-			bottom: -85px;
+			bottom: -430px;
 			right: 64px;
 			background-image: url('../images/rectangle.svg');
 			background-size: contain;
@@ -99,7 +100,7 @@
 .hero__dots{
 	position: fixed;
 	right: 150px;
-	top: 68%;
+	top: 40%;
 	transform: translateY(-50%);
 	padding: 0;
 	margin: 0;

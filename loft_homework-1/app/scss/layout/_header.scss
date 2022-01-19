@@ -17,7 +17,17 @@
   line-height: 30px;
   font-weight: 400;
   margin-left: 27px;
+
+
+  &:first-child{
+    margin: 0;
+  }
 }
+
+.logo{
+  margin-right: 38px;
+}
+
 
 .phone__info{
   margin: 0 auto;
