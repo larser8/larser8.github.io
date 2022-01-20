@@ -1,55 +1,54 @@
 .header{
-  background-color: $light-gray;
-  .container{
-    display: flex;
-    align-items: center;
+	background-color: $light-gray;
+	.container{
+	  display: flex;
+	  align-items: center;
+	}
   }
-}
-
-.list{
-  display: flex;
-  padding: 0;
-}
-
-.list__item{
-  font-family: 'Alegreya Sans';
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 400;
-  margin-left: 27px;
-
-
-  &:first-child{
-    margin: 0;
+  
+  .list{
+	display: flex;
+	padding: 0;
   }
-}
-
-.logo{
-  margin-right: 38px;
-}
-
-
-.phone__info{
-  margin: 0 auto;
-}
-
-.list__link{
-  &:hover{
-    color: $red;
-    transition: all .5s;
+  
+  .list__item{
+	font-family: 'Alegreya Sans';
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 400;
+	margin-left: 27px;
+  
+  
+	&:first-child{
+	  margin: 0;
+	}
   }
-}
-
-.logo__phone{
-  padding-right: 7px;
-}
-
-.phone{
-  font-family: 'Play';
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 400;
-}
-
+  
+  .logo{
+	margin-right: 38px;
+  }
+  
+  
+  .phone__info{
+	margin: 0 auto;
+  }
+  
+  .list__link{
+	&:hover{
+	  color: $red;
+	  transition: all .5s;
+	}
+  }
+  
+  .logo__phone{
+	padding-right: 7px;
+  }
+  
+  .phone{
+	font-family: 'Play';
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 400;
+  }
 
 

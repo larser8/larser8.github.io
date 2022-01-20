@@ -1,0 +1,18 @@
+.adress__item{
+    color: $black;
+}
+
+.social__icon-list{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social__icon-item{
+    margin-right: 10px;
+
+    &:last-child{
+        margin: 0;
+    }
+}
+
+
