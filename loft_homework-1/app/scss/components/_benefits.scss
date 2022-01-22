@@ -13,6 +13,28 @@
 		top: 55px;
 		right: 0;
 		transform: translateX(50%);
+
+		
+		@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		display: none;
+		}
+	}
+
+	p{
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		max-width: 15.5625em;
+
+		&:first-child{
+			max-width: 14.3125em;
+		}
+
+		&:last-child{
+			max-width: 14.1875em;
+		}
+	}
 	}
 
 	&:first-child{

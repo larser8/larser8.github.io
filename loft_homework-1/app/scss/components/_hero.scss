@@ -6,7 +6,7 @@
 
 	@include media('>=tablet') {
 		// здесь будут стили 768 - 1024
-		max-width: 48em;
+		height: 50rem;
 	}
 	.container{
 		position: relative;
@@ -16,7 +16,7 @@
 			position: absolute;
 			width: 45px;
 			height: 45px;
-			bottom: -460px;
+			bottom: -24px;
 			right: 64px;
 			background-image: url('../images/rectangle.svg');
 			background-size: contain;
@@ -44,7 +44,8 @@
 
 	@include media('>=tablet') {
 		// здесь будут стили 768 - 1024
-		
+		max-width: 42em;
+		text-align: center;
 	}
 }
 
@@ -57,10 +58,6 @@
 	margin-bottom: 20px;
 
 
-	@include media('>=tablet') {
-		// здесь будут стили 768 - 1024
-		max-width: 41.5rem;
-	}
 }
 
 .hero__text{
@@ -70,6 +67,12 @@
 	font-weight: 400;
 	max-width: 332px;
 	margin-bottom: 37px;
+
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		margin: 0 auto;
+	}
 }
 
 .hero__button{
@@ -79,6 +82,12 @@
 	border: none;
 	color: $white;
 	font-family: 'Play';
+
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		margin-top: 1.4375em;
+	}
 
 	&:hover{
 		background-color: $dark-gray;
