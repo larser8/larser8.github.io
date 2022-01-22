@@ -2,6 +2,12 @@
 	background-color: #F5F5F5;
 	padding-top: 20px;
 	height: 100vh;
+	
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		max-width: 48em;
+	}
 	.container{
 		position: relative;
 		max-width: 940px;
@@ -23,12 +29,23 @@
 .hero__info{
 	display: flex;
 	margin-top: -58px;
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		display: none;
+	}
+
 }
 
 .hero__content{
 	max-width: 440px;
 	margin-top: 48px;
 	padding-bottom: 77px;
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		
+	}
 }
 
 .hero__title{
@@ -38,6 +55,12 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 20px;
+
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		max-width: 41.5rem;
+	}
 }
 
 .hero__text{
@@ -80,9 +103,20 @@
  
 .hero__wrapper{
 	display: flex;
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
 }
 
 .hero__logo{
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		max-width: 20.1em;
+	}
 }
 
 .hero__info-item{

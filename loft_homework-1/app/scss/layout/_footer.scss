@@ -2,12 +2,12 @@
     color: $black;
 }
 
-.social__icon-list{
+.footer__list{
     display: flex;
     justify-content: flex-end;
 }
 
-.social__icon-item{
+.footer__item{
     margin-right: 10px;
 
     &:last-child{

@@ -1,23 +1,60 @@
 .header{
 	margin-bottom: 47px;
+
+	// 320 - 768
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+	}
+	
+	@include media('>=desktop') {
+		// 1024 
+		margin-bottom: 47px;
+	}
+	@include media('>=1112px') {
+		
+	}
 	.container{
 	  display: flex;
 	  align-items: center;
+		&::before{
+			display: none;
+		}
 	}
   }
   
   .list{
-	display: flex;
-	padding: 0;
+		display: flex;
+		padding: 0;
+		@include media('>=tablet') {
+			// здесь будут стили 768 - 1024
+			display: none;
+		}
+
   }
   
   .list__item{
 	font-family: 'Alegreya Sans';
-	font-size: 18px;
-	line-height: 30px;
+	font-size: 13px;
+	line-height: 17px;
 	font-weight: 400;
-	margin-left: 27px;
-  
+	margin-left: 15px;
+	
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+
+
+		&.phone__info{
+			display: none;
+		}
+	}
+	
+	@include media('>=desktop') {
+		// 1024 
+		font-size: 18px;
+		line-height: 30px;
+		margin-left: 27px;
+	}
   
 	&:first-child{
 	  margin: 0;
@@ -42,6 +79,11 @@
   
   .logo__phone{
 	padding-right: 7px;
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		display: none;
+	}
   }
   
   .phone{
@@ -49,6 +91,16 @@
 	font-size: 18px;
 	line-height: 18px;
 	font-weight: 400;
+
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		display: none;
+	}
   }
+
+
+
+
 
 
