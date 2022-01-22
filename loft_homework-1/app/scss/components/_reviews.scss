@@ -46,6 +46,15 @@
 		transform: translateX(-50%);
 		top: -65px ;
 	}
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 45.25em;
+		margin: 0 auto;
+	}
 }
 
 .reviews__title{
@@ -58,6 +67,13 @@
 
 .reviews__info-text{
 	padding-top: 56px;
+
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		margin-bottom: 30px;
+		padding: 0;
+		}
 }
 
 .reviews__name{
@@ -66,6 +82,14 @@
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 20px;
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		text-align: center;
+		font-weight: 400;
+		font-size: 1.125em;
+		line-height: 1.5em;
+		}
 }
 
 .reviews__subtitle{
@@ -73,6 +97,11 @@
 	font-size: 24px;
 	line-height: 27px;
 	font-weight: 700;
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+			text-align: center;
+		}
 }
 
 .reviews__subtitle-text{
@@ -81,15 +110,34 @@
 	line-height: 19px;
 	color: $dark-gray;
 	max-width: 480px;
+
+		
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		max-width: 42.3125rem;
+		text-align: center;
+		}
 }
 
 .reviews__img{
 	padding: 42px;
+	
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		max-width:  8.125em;
+		
+		}
 }
 
 .reviews__list{
 	display: flex;
 	justify-content: center;
+
+			
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+			margin-top: 32px;
+		}
 }
 
 .reviews__item{
