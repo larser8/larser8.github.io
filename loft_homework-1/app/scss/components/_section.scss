@@ -1,6 +1,6 @@
 .section{
 	padding: 103px 0;
-	height: 100vh;
+	height: calc(100vh - 206px);
 	.container{
 		position: relative;
 		&::before{
@@ -20,11 +20,13 @@
 	@include media('>=tablet') {
 		// здесь будут стили 768 - 1024
 		overflow: hidden;
+		max-width: 97.333%;
 		}
 
 		@include media('>=xs-phone') {
 			// здесь будут стили 768 - 1024
 				overflow: hidden;
+				max-width: 97.333%;
 			}
 }
 .section__title{

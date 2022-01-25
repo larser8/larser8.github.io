@@ -10,11 +10,6 @@
 	background: #F2F5F4;
 	border-radius: 50%;
 	margin-bottom: 24px;
-
-	&:last-child{
-		margin: 0;
-	}
-	
 	
 	@include media('>=xs-phone') {
 		// здесь будут стили 320 - 1024

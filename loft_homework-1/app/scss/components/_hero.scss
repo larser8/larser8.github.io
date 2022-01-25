@@ -163,19 +163,18 @@
  
 .hero__wrapper{
 	display: flex;
-
-	@include media('<=tablet') {
-		// здесь будут стили 768 - 1024
-		display: flex;
+	display: flex;
 		flex-direction: column-reverse;
 		align-items: center;
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		flex-direction: row;
 	}
 
 	@include media('>=xs-phone') {
 		// здесь будут стили 768 - 1024
-		display: flex;
-		flex-direction: column-reverse;
-		align-items: center;
+		
 	}
 }
 
