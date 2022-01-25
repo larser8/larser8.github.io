@@ -1,11 +1,41 @@
 .benefits{
   display: flex;
+
+
+
+
+  @include media('<=xs-phone') {
+	// здесь будут стили 320 - 1024
+		flex-direction: column;
+	}
+
+
+	@include media('<=phone') {
+		// здесь будут стили 320 - 1024
+			flex-direction: column;
+		}
 }
 
 .benefits__item{
 	flex: 1;
 	padding: 0 3%;
 	position: relative;
+
+
+
+	@include media('<=tablet') {
+		// здесь будут стили 768 - 1024
+		display: flex;
+		flex-direction: column;
+	}
+
+	@include media('>=xs-phone') {
+		// здесь будут стили 768 - 1024
+			display: flex;
+			margin-bottom: 31px;
+			padding: 0;
+		}
+
 
 	&:before{
 		content: url("../images/decor.png");
@@ -15,26 +45,29 @@
 		transform: translateX(50%);
 
 		
-		@include media('>=tablet') {
+		@include media('<=tablet') {
 		// здесь будут стили 768 - 1024
 		display: none;
 		}
+
+		@include media('>=xs-phone') {
+			// здесь будут стили 320 - 1024
+			display: none;
+			}
 	}
 
 	p{
 
 	@include media('>=tablet') {
 		// здесь будут стили 768 - 1024
-		max-width: 15.5625em;
+		max-width: 10.5625em;
+	  }
 
-		&:first-child{
-			max-width: 14.3125em;
+	  
+	  @include media('>=xs-phone') {
+		// здесь будут стили 320 - 1024
+			max-width: 20em;
 		}
-
-		&:last-child{
-			max-width: 14.1875em;
-		}
-	}
 	}
 
 	&:first-child{
@@ -42,7 +75,7 @@
 	}
 
 	&:last-child{
-		padding-right: 0;
+		padding-right: 0; 
 
 		&:before{
 			display: none;

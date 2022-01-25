@@ -20,6 +20,10 @@
 				background-position: center center;
 		  }
 	  }
+	  @include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		overflow: hidden;
+	}
   }
 
 

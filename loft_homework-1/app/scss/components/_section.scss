@@ -16,6 +16,16 @@
 			background-position: center center;
 		}
 	}
+
+	@include media('>=tablet') {
+		// здесь будут стили 768 - 1024
+		overflow: hidden;
+		}
+
+		@include media('>=xs-phone') {
+			// здесь будут стили 768 - 1024
+				overflow: hidden;
+			}
 }
 .section__title{
 	font-family: 'Play';

@@ -9,8 +9,17 @@
 	position: relative;
 	background: #F2F5F4;
 	border-radius: 50%;
-	overflow: hidden;
 	margin-bottom: 24px;
+
+	&:last-child{
+		margin: 0;
+	}
+	
+	
+	@include media('>=xs-phone') {
+		// здесь будут стили 320 - 1024
+		margin-left: 16px;
+		}
 }
 
 .benefit__icon{
@@ -22,11 +31,23 @@
 	transform: translate(-50%, -50%);
 }
 
+
 .benefit__title{
 	font-family: 'Play';
 	font-size: 24px;
 	line-height: 27px;
 	font-weight: 700;
+
+
+	@include media('>=tablet') {
+		// здесь будут стили 320 - 1024
+			max-width: 17.25em;
+		}
+
+	@include media('>=xs-phone') {
+		// здесь будут стили 320 - 1024
+			max-width: 20em;
+		}
 }
 
 .benefit__desc{
@@ -36,4 +57,11 @@
 	p{
 		margin: 0;
 	}
+}
+
+.benefit__text{
+	@include media('>=xs-phone') {
+		// здесь будут стили 320 - 1024
+		margin-left: 0.75em;
+		}
 }

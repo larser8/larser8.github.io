@@ -2,15 +2,15 @@
 	margin-bottom: 47px;
 
 	// 320 - 768
-	@include media('>=tablet') {
+	@include media('<=tablet') {
 		// здесь будут стили 768 - 1024
 	}
 	
-	@include media('>=desktop') {
+	@include media('<=desktop') {
 		// 1024 
 		margin-bottom: 47px;
 	}
-	@include media('>=1112px') {
+	@include media('<=1112px') {
 		
 	}
 	.container{
@@ -25,7 +25,12 @@
   .list{
 		display: flex;
 		padding: 0;
-		@include media('>=tablet') {
+		@include media('<=tablet') {
+			// здесь будут стили 768 - 1024
+			display: none;
+		}
+
+		@include media('<=xs-phone') {
 			// здесь будут стили 768 - 1024
 			display: none;
 		}
@@ -40,7 +45,7 @@
 	margin-left: 15px;
 	
 
-	@include media('>=tablet') {
+	@include media('<=tablet') {
 		// здесь будут стили 768 - 1024
 
 
@@ -49,7 +54,7 @@
 		}
 	}
 	
-	@include media('>=desktop') {
+	@include media('<=desktop') {
 		// 1024 
 		font-size: 18px;
 		line-height: 30px;
@@ -58,6 +63,10 @@
   
 	&:first-child{
 	  margin: 0;
+	}
+	@include media('<=xs-phone') {
+		// здесь будут стили 768 - 1024
+		display: none;
 	}
   }
   
@@ -80,7 +89,12 @@
   .logo__phone{
 	padding-right: 7px;
 
-	@include media('>=tablet') {
+	@include media('<=tablet') {
+		// здесь будут стили 768 - 1024
+		display: none;
+	}
+
+	@include media('<=xs-phone') {
 		// здесь будут стили 768 - 1024
 		display: none;
 	}
@@ -93,10 +107,40 @@
 	font-weight: 400;
 
 
-	@include media('>=tablet') {
+	@include media('<=tablet') {
 		// здесь будут стили 768 - 1024
 		display: none;
 	}
+	@include media('<=xs-phone') {
+		// здесь будут стили 768 - 1024
+		display: none;
+	}
+  }
+
+  .burger__menu{
+	  width: 24px;
+	  height: 20px;
+	  display: inline-flex;
+	  flex-direction: column;
+	  justify-content: space-between;
+	  display: none;
+	  
+	  @include media('<=tablet') {
+		// здесь будут стили 768 - 1024
+		display: inline-flex;
+	}
+
+	@include media('<=xs-phone') {
+		// здесь будут стили 768 - 1024
+		display: inline-flex;
+	}
+  }
+
+  .burger__plank{
+	  display: block;
+	  background: #292929;
+	  height: 4px;
+	  border-radius: 10px;
   }
 
 

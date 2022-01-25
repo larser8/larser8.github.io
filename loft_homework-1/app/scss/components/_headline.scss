@@ -7,6 +7,16 @@
   margin-bottom: 18px;
   font-size: 48px;
   line-height: 52px;
+  font-weight: 700;
+
+
+	@include media('>=xs-phone') {
+		// здесь будут стили 320 - 1024
+			font-size: 2em;
+			line-height: 2.25em;
+		}
+
+
 }
 
 .headline__subtitle{
@@ -17,5 +27,10 @@
 	font-weight: 400;
 	max-width: 530px;
 	margin: 0 auto 62px;
+
+	@include media('>=xs-phone') {
+		// здесь будут стили 320 - 1024
+		max-width:  27.25em;
+		}
 	
 }
