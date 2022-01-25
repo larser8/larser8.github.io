@@ -46,6 +46,11 @@
 					<div class="phone__info">
 					<img src="images/phone.svg" alt="" class="logo__phone">
 					<a href="tel:+88009039090" class="phone">8 800 903 90 90</a>
+					<a href="" class="burger__menu">
+						<span class="burger__plank"></span>
+						<span class="burger__plank"></span>
+						<span class="burger__plank"></span>
+					</a>
 				</div>
 				</div>
 			</header>
@@ -70,7 +75,7 @@
 				</div>
 				<div class="hero__info">
 					<div class="hero__info-item">
-						<img class="hero__icon" src="images/info-icon-1.svg" alt="">
+						<use xlink:href="./sprite.svg#info-icon-1"></use>
 						<div class="hero__list-info">Безупречный звук</div>
 					</div>
 					<div class="hero__info-item">
@@ -85,6 +90,7 @@
 			</div>
 			
 		</section>
+		
 			<section class="section">
 				<div class="container">
 					<div class="headline">
@@ -149,14 +155,15 @@
 				</ul>
 				</div>
 			</section>
-			<section class="section__reviews">
+			
+			 <section class="section__reviews">
 				<div class="container">
 					<h2 class="reviews__title">Отзывы</h2>
 					<div class="reviews__subinfo">
 						<img src="images/billi.jpg" alt="" class="reviews__img">
 						<div class="reviews__info-text">
 							<h3 class="reviews__subtitle">Отличный звук</h3>
-							<p class="reviews__subtitle-text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно.</p>
+							<p class="reviews__subtitle-text">Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус.</p>
 							<article class="reviews__name">Билли Айлиш</article>
 						</div>
 					</div>
@@ -181,6 +188,7 @@
 					</div>
 			</div>
 			</section>
+			
 			<section class="section__form">
 				<div class="container">
 					<h2 class="section__title-form">закажите доставку</h2>
@@ -255,6 +263,7 @@
 					</form>
 				</div>
 			</section>
+			
 			<ul class="hero__dots">
 				<li class="hero__dots-item active">
 					<button class="button__dots "></button>
@@ -284,43 +293,46 @@
 					<button class="button__dots"></button>
 				</li>
 			</ul>
-			<footer class="footer">
+			
+				 <section class="map">
+					<div class="container">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13349.258221659433!2d37.59342549541752!3d55.75023593808023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bb34d644c67%3A0x4666bf5bc9bd0924!2z0YAt0L0g0JDRgNCx0LDRgiwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sua!4v1642624142850!5m2!1sru!2sua" width="100%" height="652" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+			</section>
+
+			 <footer class="footer">
 				<div class="container">
-					<div class="adress__list">
-						<div class="adress__list-foot">
-							<div class="adress__item">Москва, ул.Новый Арбат, д.31/12</div>
-					</div>
+					<address class="contacts">
+						<div class="address__text">
+							Москва, ул.Новый Арбат, д.31/12
+						</div>
 						<img src="images/phone.svg" alt="" class="logo__phone">
 						<a href="tel:+88009039090" class="phone">8 800 903 90 90</a>
-					</div>
-					<div class="adress__visit">
-						<ul class="social__icon-list">
-							<li class="social__icon-item">
-								<a href="#" class="social__icon-link">
-									<img src="images/vk-icon.svg" alt="" class="vk__icon">
-								</a>
-							</li>
-							<li class="social__icon-item">
-								<a href="#" class="social__icon-link">
-									<img src="images/facebook-icon.svg" alt="" class="facebook__icon">
-								</a>
-							</li>
-							<li class="social__icon-item">
-								<a href="#" class="social__icon-link">
-									<img src="images/instagram-icon.svg" alt="" class="instagram__icon">
-								</a>
-							</li>
-							<li class="social__icon-item">
-								<a href="#" class="social__icon-link">
-									<img src="images/telegram-icon.svg" alt="" class="telegram__icon">
-								</a>
-							</li>
-						</ul>
-					</div>
-					</div>
+					</address>
+					<ul class="social">
+						<li class="social__item">
+							<a href="#" class="social__link">
+								<img src="/images/vk-icon.svg" alt="" class="social__icon">
+							</a>
+						</li>
+						<li class="social__item">
+							<a href="#" class="social__link">
+								<img src="/images/facebook-icon.svg" alt="" class="social__icon">
+							</a>
+						</li>
+						<li class="social__item">
+							<a href="#" class="social__link">
+								<img src="/images/instagram-icon.svg" alt="" class="social__icon">
+							</a>
+						</li>
+						<li class="social__item">
+							<a href="#" class="social__link">
+								<img src="/images/telegram-icon.svg" alt="" class="social__icon">
+							</a>
+						</li>
+					</ul>
 				</div>
-			</div>
-			</footer>
+			</footer>  
+					
 	</body>
 </html>
