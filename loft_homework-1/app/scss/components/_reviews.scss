@@ -4,6 +4,7 @@
 	  display: flex;
 	  flex-direction: column;
 	  justify-content: center;
+	  overflow: hidden;
 	  .container{
 		  position: relative;
 		  &::before{
@@ -20,10 +21,6 @@
 				background-position: center center;
 		  }
 	  }
-	  @include media('>=tablet') {
-		// здесь будут стили 768 - 1024
-		overflow: hidden;
-	}
   }
 
 
@@ -37,7 +34,11 @@
 	overflow: hidden;
 	position: relative;
 
-
+	@include media('<=tablet') {
+		// здесь будут стили 768 - 1024
+		flex-direction: column;
+		max-width: 45.25em;
+	}
 	
 	
 	&::before{
@@ -52,15 +53,11 @@
 		transform: translateX(-50%);
 		top: -65px ;
 
-		@include media('<=phone') {
-			// здесь будут стили 480 - 1024
-				display: none;
-			}
 
-			@include media('<=tablet') {
-				// здесь будут стили 480 - 1024
-					display: none;
-				}
+		@include media('<=phone') {
+			// здесь будут стили 768 - 1024
+			display: none;
+		}
 	}
 
 }
@@ -77,10 +74,11 @@
 	padding-top: 56px;
 
 
-	@include media('>=tablet') {
+	@include media('<=tablet') {
 		// здесь будут стили 768 - 1024
 		margin-bottom: 30px;
-		}
+		padding: 0;
+	}
 
 		
 }
@@ -91,6 +89,15 @@
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 20px;
+
+
+	@include media('<=tablet') {
+		// здесь будут стили 768 - 1024
+		text-align: center;
+		line-height: 1.5em;
+		font-weight: 400;
+		font-size: 1.125em;
+	}
 }
 
 	.reviews__subtitle{
@@ -98,6 +105,11 @@
 		font-size: 24px;
 		line-height: 27px;
 		font-weight: 700;
+
+		@include media('<=tablet') {
+			// здесь будут стили 768 - 1024
+			text-align: center;
+		}
 }
 
 .reviews__subtitle-text{
@@ -106,10 +118,22 @@
 	line-height: 19px;
 	color: $dark-gray;
 	max-width: 480px;
+
+	@include media('<=tablet') {
+		// здесь будут стили 768 - 1024
+		max-width: 42.3125em;
+		text-align: center;
+	}
 }
 
 .reviews__img{
 	padding: 42px;
+
+	@include media('<=tablet') {
+		// здесь будут стили 768 - 1024
+		max-width: 8.125em;
+		margin: 0 auto;
+	}
 	
 }
 

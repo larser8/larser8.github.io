@@ -6,6 +6,7 @@
 		// здесь будут стили 768 - 1024
 			flex-direction: column;
 			align-items: center;
+			max-width: 23.75em;
 		}
 
   @include media('<=xs-phone') {
@@ -23,7 +24,10 @@
 	@include media('<=600px') {
 		// здесь будут стили 320 - 1024
 		margin-bottom: 1.9375em;
+		display: flex;
 		}
+
+
 	&:before{
 		content: url("../images/decor.png");
 		position: absolute;

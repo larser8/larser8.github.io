@@ -1,5 +1,9 @@
 .benefit{
   text-align: center;
+  @include media('>=xs-phone') {
+	// здесь будут стили 320 - 1024
+		display: block;
+	}
 }
 
 .benefit__image-wrapper{
