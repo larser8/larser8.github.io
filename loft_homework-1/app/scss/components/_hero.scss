@@ -8,6 +8,10 @@
 		// здесь будут стили 768 - 1024
 		height: 100vh;
 		overflow: hidden;
+
+		.container{
+			padding: 0 3%;
+		}
 	}
 	.container{
 		position: relative;
@@ -40,7 +44,7 @@
 
 	@include media('<=tablet') {
 		// здесь будут стили 768 - 1024
-		
+		display: none;
 	}
 
 	@include media('<=xs-phone') {
@@ -215,6 +219,10 @@
 	transform: translateY(-50%);
 	padding: 0;
 	margin: 0;
+
+	@include media('<=tablet'){
+		display: none;
+	}
 }
 
 .button__dots{
@@ -228,7 +236,6 @@
 	margin: 0 auto;
 	cursor: pointer;
 	position: relative;
-
 }
 
 

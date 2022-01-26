@@ -1,6 +1,15 @@
+.footer{
+    overflow: hidden;
+    padding: 0 4%;
+}
+
 .social{
     display: flex;
     justify-content: flex-end;
+
+    @include media('<=phone'){
+       justify-content: center;
+    }
 }
 
 .contacts{
