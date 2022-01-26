@@ -36,13 +36,14 @@
 .hero__info{
 	display: flex;
 	margin-top: -58px;
+	margin-left: 60px;
 
 	@include media('<=tablet') {
 		// здесь будут стили 768 - 1024
-		display: none;
+		
 	}
 
-	@include media('>=xs-phone') {
+	@include media('<=xs-phone') {
 		// здесь будут стили 768 - 1024
 		display: none;
 	}
@@ -65,6 +66,13 @@
 		max-width: 42em;
 		text-align: center;
 	}
+}
+
+.info-icon__1{
+	position: absolute;
+	bottom: -24%;
+	left: 4%;
+
 }
 
 .hero__title{

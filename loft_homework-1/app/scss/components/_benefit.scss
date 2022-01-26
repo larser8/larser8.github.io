@@ -1,8 +1,14 @@
 .benefit{
   text-align: center;
-  @include media('>=xs-phone') {
+
+  @include media ('<=phone'){
+	  text-align: left;
+  }
+
+  
+  @include media('<=xs-phone') {
 	// здесь будут стили 320 - 1024
-		display: block;
+		text-align: left;
 	}
 }
 
