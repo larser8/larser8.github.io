@@ -223,6 +223,14 @@
 	@include media('<=tablet'){
 		display: none;
 	}
+
+	@include media('<=phone'){
+		display: none;
+	}
+
+	@include media('<=xs-phone'){
+		display: none;
+	}
 }
 
 .button__dots{
@@ -236,6 +244,7 @@
 	margin: 0 auto;
 	cursor: pointer;
 	position: relative;
+
 }
 
 
@@ -267,6 +276,18 @@
 					transform: translate(-50%, -50%);
 				}
 		}
+	}
+
+	@include media('<=tablet'){
+		display: none;
+	}
+
+	@include media('<=phone'){
+		display: none;
+	}
+
+	@include media('<=xs-phone'){
+		display: none;
 	}
 }
 
