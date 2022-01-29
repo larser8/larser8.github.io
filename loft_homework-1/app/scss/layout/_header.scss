@@ -128,6 +128,10 @@
 	  @include media('<=tablet') {
 		// здесь будут стили 768 - 1024
 		display: inline-flex;
+		position: absolute;
+		right: 9%;
+		top: 20%;
+		bottom: 0;
 	}
 
 	@include media('<=xs-phone') {
