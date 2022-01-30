@@ -2,16 +2,50 @@
     background-color: $light-gray;
     overflow: hidden;
     height: 60em;
+     position: relative;
+
+        &.price::before{
+            content: "";
+            position: absolute;
+            background-image: url('../../images/square.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            bottom: 0;
+            right: 15%;
+        }
+
+        @include media('<=tablet') {
+            // здесь будут стили 768 - 1024
+            height: 100vh;
+            overflow: hidden;
+    
+            .container{
+                padding: 0 3%;
+            }
+        }
 }
 
 .price__slider-info{
     margin-left: 60px;
     margin-top: 66px;
+
+    @include media('<=tablet'){
+       margin-left: 0;
+       padding: 0 3%;
+       margin-top: 3.125em;
+    }
 }
 
 .price__slider{
     display: flex;
     position: relative;
+
+    @include media('<=tablet'){
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .price__right{
@@ -20,6 +54,31 @@
     top: 50%;
     right: 0;
     transform: translate(-50%);
+
+    @include media('<=tablet'){
+        content: "";
+        position: absolute;
+        top: 36%;
+        right: 15%; 
+    }
+
+    @include media('<=620px'){
+        content: "";
+        position: absolute;
+        top: 31%;
+        right: 6%; 
+    }
+
+    @include media('<=phone'){
+        content: "";
+        position: absolute;
+        top: 31%;
+        right: 0; 
+    }
+
+    @include media('<=366px'){
+        display: none;
+    }
     
 }
 
@@ -28,11 +87,40 @@
     position: absolute;
     left: -5%;
     top: 50%;
-    transform: translate(-60%);
+    transform: translate(-50%);
+
+    @include media('<=tablet'){
+        content: "";
+        position: absolute;
+        top: 36%;
+        left: 15%; 
+    }
+    
+    @include media('<=620px'){
+            content: "";
+            position: absolute;
+            top: 31%;
+            left: 6%; 
+    }
+
+    @include media('<=phone'){
+        content: "";
+        position: absolute;
+        top: 30%;
+        left: 0; 
+    }
+
+    @include media('<=366px'){
+        display: none;
+    }
 }
 
 .price__info{
     display: flex;
+
+    @include media('<=tablet'){
+        justify-content: center;
+    }
 }
 
 .price__power{
@@ -62,10 +150,38 @@
     font-weight: 700;
     text-transform: uppercase;
     max-width: 419px;
+
+    @include media('<=tablet'){
+        font-size: 1.75em;
+        max-width: 37.5em;
+    }
+
+    @include media('<=598px'){
+        text-align: center;
+    }
+
+    @include media('<=466px'){
+        text-align: center;
+    }
+
+    @include media('<=phone'){
+        max-width: 26em;
+        text-align: center;
+    }
 }
 
 p{
     max-width: 368px;
+
+    @include media('<=tablet'){
+        max-width: 38.375em;
+        text-align: center;
+    }
+    @include media('<=phone'){
+        max-width: 25.75em;
+        text-align: center;
+    }
+
 }
 
 span{
@@ -79,6 +195,25 @@ span{
 .price__list{
     display: -webkit-box;
     margin-top: 24px;
+
+    @include media('<=tablet'){
+      display: flex;
+      justify-content: center;  
+
+      &.hero__button{
+        margin: 0;
+      }
+    }
+
+    @include media('<=340px'){
+        flex-direction: column;
+    }
+
+    @include media('<=xs-phone'){
+        flex-direction: column;
+    }
+
+  
 }
 
 .price__subtitle-sum{
@@ -88,6 +223,14 @@ span{
     font-weight: 400;
     padding-right: 13px;
     margin-top: 12px;
+
+    @include media('<=340px'){
+        text-align: center;
+    }
+
+    @include media('<=xs-phone'){
+        text-align: center;
+    }
 }
 
 .price__icon{
@@ -99,4 +242,21 @@ span{
     margin-bottom: 25px;
 }
 
+.hero__dots{
+    @include media('<=tablet'){
+        display: none;
+    }
+}
+
+.price__subicon-menu{
+    @include media('<=tablet'){
+        display: none;
+    }
+}
+
+.price__logo{
+    @include media('<=tablet'){
+        max-width: 19.125em;
+    }
+}
 

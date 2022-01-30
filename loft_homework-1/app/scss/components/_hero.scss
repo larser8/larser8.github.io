@@ -149,7 +149,11 @@
 	@include media('<=tablet') {
 		// здесь будут стили 768 - 1024
 		margin-top: 1.4375em;
-		
+
+
+		&.button__price{
+			margin: 0;
+		}
 	}
 
 	&:hover{
