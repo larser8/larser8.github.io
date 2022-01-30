@@ -249,6 +249,7 @@ span{
 }
 
 .price__subicon-menu{
+    display: flex;
     @include media('<=tablet'){
         display: none;
     }
@@ -258,5 +259,60 @@ span{
     @include media('<=tablet'){
         max-width: 19.125em;
     }
+}
+
+.drop__list{
+    padding: 8% 11%;
+}
+
+.drop__item{
+    margin-bottom: 28px;
+
+    &:last-child{
+        margin: 0;
+    }
+}
+
+.drop-down__menu{
+    border-radius: 4px;
+    width: 273px;
+    height: 294px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+}
+
+.drop__down-bluetooth{
+    margin-left: 51px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.drop__down-power{
+    margin-left: 60px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.drop__down-range{
+   margin-left: 60px;
+   font-size: 16px;
+   line-height: 24px;
+   font-weight: 400;
+}
+
+.drop__down-gramm{
+    margin-left: 70px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.drop__down-year{
+    margin-left: 40px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
 }
 

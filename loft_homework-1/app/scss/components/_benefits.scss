@@ -43,7 +43,7 @@
 
 	
 
-		@include media('>=xs-phone') {
+		@include media('<=xs-phone') {
 			// здесь будут стили 320 - 1024
 			display: none;
 			}
@@ -58,7 +58,7 @@
 
 
 
-	  @include media('>=xs-phone') {
+	  @include media('<=xs-phone') {
 		// здесь будут стили 320 - 1024
 			max-width: 20em;
 		}
