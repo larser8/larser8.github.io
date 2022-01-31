@@ -25,7 +25,11 @@
 		// здесь будут стили 320 - 1024
 		margin-bottom: 1.9375em;
 		display: flex;
+
+		&:last-child{
+			margin-bottom: 0;
 		}
+	}
 
 
 	&:before{
@@ -65,19 +69,14 @@
 	}
 
 	&:first-child{
-		padding-left: 0;
+		padding-left: 3%;
 	}
 
 	&:last-child{
-		padding-right: 0; 
+		padding-right: 3%; 
 
 		&:before{
 			display: none;
 		}
-	}
-
-	@include media('>=tablet') {
-		// здесь будут стили 768 - 1024
-		
 	}
 }

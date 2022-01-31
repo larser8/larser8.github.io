@@ -7,7 +7,7 @@
         &.price::before{
             content: "";
             position: absolute;
-            background-image: url('../../images/square.svg');
+            background-image: url('../images/square.svg');
             background-repeat: no-repeat;
             background-size: contain;
             width: 24px;
@@ -265,7 +265,7 @@ span{
     padding: 8% 11%;
 }
 
-.drop__item{
+.drop__down-item{
     margin-bottom: 28px;
 
     &:last-child{
