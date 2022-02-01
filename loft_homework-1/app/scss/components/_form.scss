@@ -5,8 +5,13 @@
 	background-size: cover;
   	// height: 100vh;
 	width: 100%;
+	height: 100vh;
 	padding: 20px 0;
 	overflow: hidden;
+
+	@include media('<=tablet'){
+		height: 60em;
+	}
 }
 
 .section__title-form{
