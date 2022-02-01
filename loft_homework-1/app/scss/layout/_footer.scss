@@ -1,11 +1,16 @@
 .footer{
     overflow: hidden;
     padding: 0 4%;
+    position: relative;
+    height: 7em;
 }
 
 .social{
     display: flex;
-    justify-content: flex-end;
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+
 
     @include media('<=phone'){
        justify-content: center;
