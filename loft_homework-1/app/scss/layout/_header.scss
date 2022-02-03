@@ -1,3 +1,7 @@
+body.is-active{
+	overflow: hidden;
+}
+
 .header{
 	margin-bottom: 47px;
 
@@ -21,18 +25,62 @@
 		}
 	}
   }
+
+	.navigation{
+		@include media('<=tablet') {
+			opacity: 0;
+			visibility: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 10;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&::before{
+				content: '';
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background: #313131;
+				z-index: 9;
+			}
+
+		}
+
+		.is-active &{
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.list__link{
+			font-size: 36px;
+			line-height: 72px;
+			font-weight: 400;
+		}
+	}
   
   .list{
 		display: flex;
 		padding: 0;
 		@include media('<=tablet') {
 			// здесь будут стили 768 - 1024
-			display: none;
+			// display: none;
+			flex-direction: column;
+			position: relative;
+			z-index: 12;
 		}
 
 		@include media('<=xs-phone') {
 			// здесь будут стили 768 - 1024
-			display: none;
+			// display: none;
 		}
 
   }
@@ -44,21 +92,20 @@
 	font-weight: 400;
 	margin-left: 15px;
 	
-
-	@include media('<=tablet') {
-		// здесь будут стили 768 - 1024
-
-
-		&.phone__info{
-			display: none;
-		}
-	}
-	
 	@include media('<=desktop') {
 		// 1024 
 		font-size: 18px;
 		line-height: 30px;
 		margin-left: 27px;
+	}
+
+	@include media('<=tablet') {
+		// здесь будут стили 768 - 1024
+		margin-left: 0;
+		
+		&.phone__info{
+			display: none;
+		}
 	}
   
 	&:first-child{
@@ -66,7 +113,7 @@
 	}
 	@include media('<=xs-phone') {
 		// здесь будут стили 768 - 1024
-		display: none;
+		// display: none;
 	}
   }
   
@@ -80,6 +127,10 @@
   }
   
   .list__link{
+
+		@include media('<=tablet') {
+			color: #fff;
+		}
 	&:hover{
 	  color: $red;
 	  transition: all .5s;
@@ -132,12 +183,31 @@
 		right: 9%;
 		top: 20%;
 		bottom: 0;
+		z-index: 20;
 	}
 
 	@include media('<=xs-phone') {
 		// здесь будут стили 768 - 1024
 		display: inline-flex;
 	}
+
+		.is-active &{
+			.burger__plank{
+				background: #fff;
+
+				&:first-child{
+					transform: rotate(45deg);
+					top: 9px;
+				}
+				&:nth-child(2){
+					transform: rotate(-45deg);
+					top: -7px;
+				}
+				&:last-child{
+					display: none;
+				}
+			}
+		}
   }
 
   .burger__plank{
@@ -145,6 +215,8 @@
 	  background: #292929;
 	  height: 4px;
 	  border-radius: 10px;
+		position: relative;
+		transition: all .2s;
   }
 
 

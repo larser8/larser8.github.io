@@ -1,7 +1,8 @@
-const workers = [
-    {"name":"John","salary":500},
-    {"name":"Mike","salary":1300},
-    {"name":"Linda","salary":1500}];
+const body = document.body;
+const burger = document.querySelector('.burger__menu');
+const activeClass = 'is-active';
 
-  console.log(getWorthyWorkers(workers));
-
+burger.addEventListener('click', function(e) {
+  e.preventDefault();
+  body.classList.contains(activeClass) ? body.classList.remove(activeClass) :body.classList.add(activeClass) 
+})
