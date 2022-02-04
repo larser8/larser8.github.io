@@ -1,0 +1,49 @@
+.team{
+    overflow: hidden;
+    height: 100vh;
+}
+
+.title__team{
+    text-align: center;
+    font-family: 'Play';
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 700;
+    margin-top: 73px;
+    
+
+}
+
+.team__list{
+    display: flex;
+    text-align: center
+}
+
+
+
+.team__link{
+    font-family: 'Play';
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
+.team__bio{
+    display: flex;
+    flex-direction: column;
+}
+
+.team__info{
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: $black;
+}
+
+.team__avatar{
+
+}
+
+.team__name{
+    text-align: center;
+}

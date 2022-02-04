@@ -60,11 +60,7 @@ body.is-active{
 			visibility: visible;
 		}
 
-		.list__link{
-			font-size: 36px;
-			line-height: 72px;
-			font-weight: 400;
-		}
+	
 	}
   
   .list{
@@ -76,6 +72,16 @@ body.is-active{
 			flex-direction: column;
 			position: relative;
 			z-index: 12;
+
+			.list__link{
+				font-size: 36px;
+				line-height: 72px;
+				font-weight: 400;
+			}
+
+			.list__item{
+				text-align: center;
+			}
 		}
 
 		@include media('<=xs-phone') {
@@ -215,8 +221,8 @@ body.is-active{
 	  background: #292929;
 	  height: 4px;
 	  border-radius: 10px;
-		position: relative;
-		transition: all .2s;
+	  position: relative;
+	  transition: all .2s;
   }
 
 
