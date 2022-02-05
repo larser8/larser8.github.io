@@ -10,13 +10,11 @@
     line-height: 52px;
     font-weight: 700;
     margin-top: 73px;
-    
-
 }
 
 .team__list{
     display: flex;
-    text-align: center
+    justify-content: space-between;
 }
 
 
@@ -26,11 +24,30 @@
     font-size: 18px;
     line-height: 21px;
     font-weight: 700;
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: -10px;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 6px solid red;
+    }
+}
+
+.team--version--mobile{
+    display: none;
 }
 
 .team__bio{
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    height: 0;
+    transition: height .3s;
+    
 }
 
 .team__info{
@@ -38,6 +55,7 @@
     line-height: 19px;
     font-weight: 400;
     color: $black;
+    margin-top: 11px;
 }
 
 .team__avatar{
@@ -46,4 +64,13 @@
 
 .team__name{
     text-align: center;
+    margin-top: 25px;
+    
+}
+
+.team__text{
+    margin: 0 auto;
+    padding-top: 4px;
+    max-width: 221px;
+
 }

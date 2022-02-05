@@ -1,0 +1,1 @@
+$('.price__slider').bxSlider();
