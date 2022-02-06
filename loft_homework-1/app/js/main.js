@@ -24,6 +24,15 @@ if (window.innerWidth <= 768) {
 
  $('.price__slider').bxSlider();
 
+ $('.form').submit(e => {
+   e.preventDefault();
+
+   $.fancybox.open({
+     src: "#main",
+     type: "inline"
+   })
+ });
+
  
 
  

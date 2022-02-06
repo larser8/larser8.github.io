@@ -24,3 +24,20 @@
     align-items: center;
 }
 
+.btn--heme--red{
+    background: red;
+    color: #fff;
+}
+
+.btn{
+    font-size: 1.05556rem;
+    font-weight: bold;
+    padding: 1rem 2.05556rem;
+    text-transform: uppercase;
+    border-radius: 5.55556em;
+    line-height: 1;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+}
+
