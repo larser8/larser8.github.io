@@ -36,6 +36,7 @@
 		//здесь будут стили 768 - 1024
 		   padding: 0;
 	   }
+	   
 }
 
 .form__col{
@@ -81,20 +82,27 @@
   border-radius: 5px;
   border: 3px solid ;
 
+  .input-error{
+	border-color: red;
+}
 
 	&--textarea{
 		height: 136px;
 		resize: none;
-
-		
 	}
 
 	&:focus{
 		border-color: $red;
 		outline: none;
 	}
-
 }
+
+
+
+
+
+
+
 
 .form__title{
   	color: #fff;

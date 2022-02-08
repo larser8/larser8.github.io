@@ -24,10 +24,21 @@
     align-items: center;
 }
 
-.btn--heme--red{
+
+
+.btn--theme--red{
+    font-family: 'Play';
     background: red;
     color: #fff;
+
+    &:hover{
+        background: #666;
+        color: #fff;
+        transition: all .3s;
+
+    }
 }
+
 
 .btn{
     font-size: 1.05556rem;
@@ -39,5 +50,13 @@
     text-decoration: none;
     display: inline-block;
     border: none;
+}
+
+.modal__content{
+    font-family: 'Play';
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-bottom: 1em;
 }
 
