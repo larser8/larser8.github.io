@@ -28,17 +28,12 @@
 
 .reviews__subinfo{
 	// здесь будут стили 320 - 768
-	display: flex;
 	margin-bottom: 32px;
 	background: #F8FAF9;
 	overflow: hidden;
 	position: relative;
+	min-height: 280px;
 
-	@include media('<=tablet') {
-		// здесь будут стили 768 - 1024
-		flex-direction: column;
-		max-width: 45.25em;
-	}
 	
 	
 	&::before{
@@ -59,6 +54,28 @@
 			display: none;
 		}
 	}
+
+}
+
+.reviews__info{
+	display: flex;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	transition: .3s;
+
+	@include media('<=tablet') {
+		// здесь будут стили 768 - 1024
+		flex-direction: column;
+		max-width: 45.25em;
+	}
+}
+
+.active{
+	position: static;
+	opacity: 1;
 
 }
 
@@ -151,19 +168,20 @@
 	margin: 0;
 }
 
-.reviews__avatar{
-	box-sizing: border-box;
+.reviews__item{
+	// box-sizing: border-box;
   
+	width: 74px;
+	height: 74px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 6px solid transparent;
+	position: relative;
+	cursor: pointer;
 	&.visit{
-		border-radius: 50%;
-		border: 5px solid $red;
-		width: 74px;
-		height: 74px;
 
 		&:hover{
 			border:	transparent;
-	
-			
 		}
 	}
 
@@ -173,21 +191,25 @@
 	border: 5px solid $red;
 	max-width: 74px;
 	}
-}
 
-.reviews__item.active{
-	position: static;
-	opacity: 1;
-	pointer-events: unset;
-
-	.reviews__item{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		pointer-events: none;
-		transition: .3s;
-		opacity: 0;
+	&.active{
+		border-color: red;
 	}
 }
+
+// .reviews__item{
+// 	position: static;
+// 	opacity: 1;
+// 	pointer-events: unset;
+
+// 	.reviews__item{
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		right: 0;
+// 		bottom: 0;
+// 		pointer-events: none;
+// 		transition: .3s;
+// 		opacity: 0;
+// 	}
+// }

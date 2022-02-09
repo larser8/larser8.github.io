@@ -78,7 +78,7 @@ if (window.innerWidth <= 768) {
         comment: comment.val(),
         to: to.val(),
       },
-        succes: (data) => {
+        success: (data) => {
           content.text(data.message);
           // console.log(data);
 
