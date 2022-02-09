@@ -2,7 +2,6 @@
     background-color: $light-gray;
     overflow: hidden;
     height: 60em;
-     position: relative;
 
         &.price::before{
             content: "";
@@ -27,6 +26,15 @@
         }
 }
 
+
+.bx-wrapper{
+    border: 0 !important;
+    background: transparent;
+    box-shadow: none;
+}
+
+
+
 .price__slider-info{
     margin-left: 60px;
     margin-top: 66px;
@@ -49,14 +57,18 @@
 }
 
 .price__right{
-    content: "";
+
     position: absolute;
     top: 50%;
     right: 0;
+    display: block;
+    width: 13px;
+    height: 28px;
     transform: translate(-50%);
+    
+
 
     @include media('<=tablet'){
-        content: "";
         position: absolute;
         top: 36%;
         right: 15%; 
@@ -85,9 +97,12 @@
 .price__left{
     content: "";
     position: absolute;
-    left: -5%;
+    width: 13px;
+    height: 28px;
     top: 50%;
-    transform: translate(-50%);
+    left: 0;
+    transform: translate(-180deg);
+    
 
     @include media('<=tablet'){
         content: "";
@@ -114,6 +129,10 @@
         display: none;
     }
 }
+
+
+
+
 
 .price__info{
     display: flex;
@@ -240,7 +259,7 @@ span{
     background-color: #9A9A9A;
     cursor: pointer;
     margin-bottom: 25px;
-
+    padding: 0 20px;
 
 }
 

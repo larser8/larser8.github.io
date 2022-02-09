@@ -15,8 +15,15 @@
 .team__list{
     display: flex;
     justify-content: space-between;
+    @include media('<=tablet'){
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
+.team--version--mobile{
+    display: none;
+}
 
 
 .team__link{
@@ -37,17 +44,12 @@
     }
 }
 
-.team--version--mobile{
-    display: none;
-}
 
 .team__bio{
     display: flex;
     flex-direction: column;
     overflow: hidden;
     height: 0;
-    transition: height .3s;
-    
 }
 
 .team__info{

@@ -22,7 +22,20 @@ if (window.innerWidth <= 768) {
   };
  };
 
- $('.slider').bxSlider();
+ const slider = $('.slider').bxSlider({
+   pager: false,
+   controls: false
+ });
+
+ $('.price__left').click(e => {
+  e.preventDefault();
+  slider.goToPrevSlide();
+ });
+
+ $('.price__right').click(e => {
+  e.preventDefault();
+  slider.goToNextSlide();
+ });
 
 
  const validateFields = (form, fieldsArray) => {
