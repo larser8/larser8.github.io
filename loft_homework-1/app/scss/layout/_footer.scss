@@ -8,12 +8,16 @@
 .social{
     display: flex;
     position: absolute;
-    bottom: 30px;
+    bottom: 19px;
     right: 50px;
 
 
     @include media('<=phone'){
-       justify-content: center;
+        justify-content: center;
+        display: flex;
+        position: absolute;
+        bottom: 11px;
+        right: 72px;
     }
 }
 

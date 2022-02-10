@@ -2,6 +2,7 @@
     background-color: $light-gray;
     overflow: hidden;
     height: 60em;
+    position: relative;
 
         &.price::before{
             content: "";
@@ -60,8 +61,8 @@
 .price__right{
 
     position: absolute;
-    top: 50%;
-    right: 0;
+    top: 32%;
+    right: 23%;
     display: block;
     width: 13px;
     height: 28px;
@@ -78,8 +79,8 @@
     @include media('<=620px'){
         content: "";
         position: absolute;
-        top: 31%;
-        right: 6%; 
+        top: 34%;
+        right: 0; 
     }
 
     @include media('<=phone'){
@@ -87,6 +88,10 @@
         position: absolute;
         top: 31%;
         right: 0; 
+    }
+
+    @include media('<=420px') {
+        display: none;
     }
 
     @include media('<=366px'){
@@ -100,8 +105,8 @@
     position: absolute;
     width: 13px;
     height: 28px;
-    top: 50%;
-    left: 0;
+    top: 31%;
+    left: 6%;
     transform: translate(-180deg);
     
 
@@ -115,7 +120,7 @@
     @include media('<=620px'){
             content: "";
             position: absolute;
-            top: 31%;
+            top: 34%;
             left: 6%; 
     }
 
@@ -124,6 +129,10 @@
         position: absolute;
         top: 30%;
         left: 0; 
+    }
+
+    @include media('<=420px') {
+        display: none;
     }
 
     @include media('<=366px'){
@@ -260,7 +269,7 @@ span{
     background-color: #9A9A9A;
     cursor: pointer;
     margin-bottom: 25px;
-    padding: 0 20px;
+    padding: 0 24px;
 
 }
 

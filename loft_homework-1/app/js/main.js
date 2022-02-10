@@ -1,4 +1,4 @@
-if (window.innerWidth <= 768) {
+if (window.innerWidth <= 768) {           //BURGER-MENU
   const body = document.body;
   const burger = document.querySelector('.burger__menu');
   const nav = document.querySelector('.list');
@@ -16,12 +16,12 @@ if (window.innerWidth <= 768) {
     }
   });
   
-  
+                  //в бургер меню не разрешать перезагружать страницу (a ссылкам)
   function toggleClass (e) {
     body.classList.contains(activeClass) ? body.classList.remove(activeClass) :body.classList.add(activeClass); 
   };
  };
-
+                  //Slider
  const slider = $('.slider').bxSlider({
    pager: false,
    controls: false
@@ -37,7 +37,7 @@ if (window.innerWidth <= 768) {
   slider.goToNextSlide();
  });
 
-
+                // МОДАЛКА
  const validateFields = (form, fieldsArray) => {
 
     fieldsArray.forEach((field) => {
@@ -66,10 +66,12 @@ if (window.innerWidth <= 768) {
    const modal = $("#modal");
    const content = modal.find(".modal__content");
 
+   modal.removeClass("error-modal");
+
    const isValid = validateFields(form, [name, phone, comment, to]);
 
    if (isValid) {
-    $.ajax({
+    const request = $.ajax({
       url: "https://webdev-api.loftschool.com/sendmail",
       method: "post",
       data: {
@@ -78,24 +80,61 @@ if (window.innerWidth <= 768) {
         comment: comment.val(),
         to: to.val(),
       },
-        success: (data) => {
-          content.text(data.message);
-          // console.log(data);
-
-   $.fancybox.open({
-    src: "#modal",
-    type: "inline"
-    });
-   },
+  
+   error: data => {}
   });
-  }
- });
 
- $(".app-submit-btn").click(e => {
+    request.done(data => {
+      content.text(data.message);
+      // console.log(data);
+ }); 
+
+  request.fail((data) => {
+    const message = data.responseJSON.message;
+    content.text(message);
+    modal.addClass("error-modal");
+
+
+   
+  });
+
+  request.always(() => {
+
+    $.fancybox.open({
+      src: "#modal",
+      type: "inline",
+    });
+
+  });
+ }
+});
+
+ $(".app-submit-btn").click((e) => {
    e.preventDefault();
 
    $.fancybox.close();
  });
+
+
+                      //Табы
+ const findBlockByAlias = (alias) => {
+   return $(".reviews__info").filter((ndx, item) => {
+     return $(item).attr("data-linked-with") === alias;
+   });
+ };
+
+  $(".interactive-avatar__link").click((e) => {
+    e.preventDefault();
+    
+
+    const $this = $(e.currentTarget);
+    const target = $this.attr("data-open");
+    const itemToShow = findBlockByAlias(target);
+    const curItem = $this.closest(".reviews__item");
+
+    itemToShow.addClass("active").siblings().removeClass("active");
+    curItem.addClass("active").siblings().removeClass("active");
+  });
 
  
 
