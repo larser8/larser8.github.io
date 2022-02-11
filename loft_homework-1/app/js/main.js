@@ -54,7 +54,7 @@ if (window.innerWidth <= 768) {           //BURGER-MENU
 
   const errorFields = form.find(".input-error");
 
-  return errorFields.lenght === 0;
+  return errorFields.length === 0;
 
  }
 
@@ -150,13 +150,34 @@ if (window.innerWidth <= 768) {           //BURGER-MENU
   const textBlock = contentBlock.find(".team__bio");
   const reqHeight = textBlock.height();
 
+
+  container.addClass("active");
   contentBlock.height(reqHeight);
 
   }
+
+  const closeEveryItem = container => {
+    const items = container.find('.team__bio-wrapper');
+    const itemContainer = container.find(".team__list-item");
+
+    itemContainer.removeClass("active");
+    items.height(0);
+  }
+
 $('.team__title').click(e => {
   const $this = $(e.currentTarget);
+  const container = $this.closest('.team__list');
+  const elemContainer = $this.closest(".team__list-item");
+
+  if (elemContainer.hasClass("active")) {
+    //close
+    closeEveryItem(container);
+  } else {
+    closeEveryItem(container);
+    openItem($this);
+  }
   
-  openItem($this);
+
 
 });
 

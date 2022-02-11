@@ -23,11 +23,20 @@
 
 .team__list-item{
     position: relative;
+  
+
+    &.active{
+        .team__title::after{
+        transform: rotate(180deg);
+        top: 14px;
+        }
+    }
+
 }
 
+
+
 .team--version--desktop{
-
-
     @include media('<=desktop'){
 
     @include media ('<=tablet'){
@@ -41,7 +50,9 @@
     height: 0;
     transition: height .3s;
 }
+
 }
+
 .team--version--mobile{
 
     @include media ('>=tablet'){
@@ -52,10 +63,9 @@
             align-items: center;
             text-align: center;
     }
-    .team__content{
-        overflow: hidden;
-        height: 0;
-        transition: height .3s;
+    .team__list-item{
+        position: relative;
+
     }
 }
 
@@ -78,11 +88,12 @@
     &::after{
         content: "";
         position: absolute;
-        top: 7px;
+        top: 13px;
         right: -10px;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
         border-top: 6px solid red;
+        transition: all .1s;
     }
     @include media ('<=tablet'){
         border: none;
@@ -148,7 +159,6 @@
     line-height: 19px;
     font-weight: 400;
     color: $black;
-    margin-top: 11px;
 }
 
 .team__avatar{
