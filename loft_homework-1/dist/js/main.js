@@ -21,6 +21,11 @@ if (window.innerWidth <= 768) {           //BURGER-MENU
     body.classList.contains(activeClass) ? body.classList.remove(activeClass) :body.classList.add(activeClass); 
   };
  };
+
+
+ 
+
+
                   //Slider
  const slider = $('.slider').bxSlider({
    pager: false,
@@ -136,25 +141,30 @@ if (window.innerWidth <= 768) {           //BURGER-MENU
     curItem.addClass("active").siblings().removeClass("active");
   });
 
- 
+
+                   //Аккардеон
+
+  const openItem = item => {
+  const container = item.closest(".team__list-item"); //возможно требует правки
+  const contentBlock = container.find(".team__bio-wrapper"); //возможно требует правки
+  const textBlock = contentBlock.find(".team__bio");
+  const reqHeight = textBlock.height();
+
+  contentBlock.height(reqHeight);
+
+  }
+$('.team__title').click(e => {
+  const $this = $(e.currentTarget);
+  
+  openItem($this);
+
+});
+
+       
 
 
 
              
-//   const openItem = item => {
-//   const container = item.closest(".team__list-item");
-//   const contentBlock = container.find(".team__name"); // возможно потребует правки
-//   const textBlock = contentBlock.find(".team__text");
-//   const reqHeight = textBlock.height();
-
-//   contentBlock.height(reqHeight);
-//  }
-
-//  $('.team__link').click(e =>{
-//    const $this = $(e.currentTarget);
-
-//    openItem($this);
-//  });
 
 
 
@@ -173,8 +183,3 @@ if (window.innerWidth <= 768) {           //BURGER-MENU
 
 
 
-// const links = document.querySelectorAll('.list__link');
-
-// links.forEach(function(element){
-//   element.addEventListener('click', toggleMenu);
-// })
