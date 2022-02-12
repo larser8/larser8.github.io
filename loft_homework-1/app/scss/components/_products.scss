@@ -37,6 +37,18 @@
     color: #fff;
     transform: rotate(-90deg);
     white-space: nowrap;
+    position: absolute;
+    bottom: 7%;
+    right: -7%;
+    left: 0;
+}
+
+.products-menu__content-text{
+    font-family: 'Alegreya Sans';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $white;
 }
 
 .products-menu__item{

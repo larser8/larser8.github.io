@@ -67,6 +67,10 @@
         position: relative;
 
     }
+    .team__bio-wrapper{
+       overflow: hidden;
+       height: 0;
+    }
 }
 
 .team__title{

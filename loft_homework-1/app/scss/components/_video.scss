@@ -1,0 +1,44 @@
+.video{
+    overflow: hidden;
+    background: #F8FAF9;
+    height: 100vh;
+}
+
+.player{
+    padding: 0 16%;
+    margin-top: 44px;
+    @include media('<=tablet'){
+        max-width:  37.125em;
+        padding: 0 7%;
+    }
+
+    @include media('<=650px'){
+        max-width: 17em;
+        font-size: 2em;
+        padding: 0 5%;
+    }
+
+    @include media('<=595px'){
+        max-width: 15em;
+        font-size: 2em;
+    }
+
+    @include media('<=phone'){
+        max-width: 12em;
+        font-size: 2em;
+    }
+
+    @include media('<=365px'){
+        max-width: 9em;
+        padding: 0;
+    }
+}
+
+.video__title{
+    font-family: 'Play';
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 58px;
+}
