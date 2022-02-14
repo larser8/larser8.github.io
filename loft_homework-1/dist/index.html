@@ -13,7 +13,7 @@
 	</head>
 
 	<body>
-		<div class="wrapper">
+			<div class="wrapper">
 			<div class="maincontent">
 		<section class="hero">
 			<header class="header">
@@ -682,7 +682,7 @@
 						</ul>
 					</div>
 					</div>
-				</div>
+	
 			</section>
 
 			<section class="section products-menu-section">
@@ -781,12 +781,29 @@
 			
 			</section>
 			
-			<section class="video">
+			<section class="video player-section">
 				<div class="container">
-					<h2 class="video__title">как мы работаем</h2>
-					<video class="player" src="images/dre.mp4"  width=665 height=380 controls></video>
+				  <h2 class="section__title">Как мы работаем</h2>
+				  <div class="player-section__container">
+					<div class="player">
+					  <div class="player__wrapper">
+						<div id="yt-player" class="player__elem"></div>
+						<div class="player__splash"></div>
+					  </div>
+					  <div class="player__controls">
+						<button class="player__start"></button>
+						<div class="player__playback">
+						  <button class="player__playback-button"></button>
+						</div>
+						<div class="player__duration">
+						  <span class="player__duration-completed">0:00</span>
+						  <span class="player__duration-estimate">0:00</span>
+						</div>
+					  </div>
+					</div>
+				  </div>
 				</div>
-			</section>
+			  </section>
 
 			<section class="section__form">
 				<div class="container">
@@ -865,7 +882,7 @@
 			</section>		
 			 <section class="map">
 					
-		  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13349.258221659433!2d37.59342549541752!3d55.75023593808023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bb34d644c67%3A0x4666bf5bc9bd0924!2z0YAt0L0g0JDRgNCx0LDRgiwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sua!4v1642624142850!5m2!1sru!2sua"style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				<div style="position:relative;" id="map"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/geo/ulitsa_novy_arbat/10050646/?ll=37.586866%2C55.752768&utm_medium=mapframe&utm_source=maps&z=16.2" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Новый Арбат — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU5JQtZsA" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
 			</section> 
 
 			 <footer class="footer">
@@ -903,9 +920,8 @@
 				</div>
 				</div>
 			</footer>
-		</div>
 	</div>
-			
+</div>
 
 
 
@@ -955,6 +971,8 @@
 	<script src="js/libs.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js" integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
 	<script src="js/main.js" defer></script>
 
 </html>

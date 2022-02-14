@@ -1,44 +1,32 @@
 .video{
-    overflow: hidden;
-    background: #F8FAF9;
     height: 100vh;
+    overflow: hidden;
 }
 
 .player{
-    padding: 0 16%;
-    margin-top: 44px;
-    @include media('<=tablet'){
-        max-width:  37.125em;
-        padding: 0 7%;
-    }
-
-    @include media('<=650px'){
-        max-width: 17em;
-        font-size: 2em;
-        padding: 0 5%;
-    }
-
-    @include media('<=595px'){
-        max-width: 15em;
-        font-size: 2em;
-    }
-
-    @include media('<=phone'){
-        max-width: 12em;
-        font-size: 2em;
-    }
-
-    @include media('<=365px'){
-        max-width: 9em;
-        padding: 0;
-    }
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
-.video__title{
-    font-family: 'Play';
-    font-size: 48px;
-    line-height: 52px;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 58px;
+.player__splash{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.player__controls{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    background: #3e3e3e;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
 }

@@ -1,6 +1,6 @@
 .benefits{
 	display: flex;
-
+	
 
 	@include media('<=600px') {
 		// здесь будут стили 768 - 1024
