@@ -1,7 +1,7 @@
 .price{
     background-color: $light-gray;
     overflow: hidden;
-    height: 60em;
+    height: 100vh;
     position: relative;
 
         &.price::before{
