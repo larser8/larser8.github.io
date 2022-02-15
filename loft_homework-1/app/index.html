@@ -15,32 +15,32 @@
 	<body>
 			<div class="wrapper">
 			<div class="maincontent">
-		<section class="hero">
+		<section data-section-id="hero" class="hero">
 			<header class="header">
 				<div class="container">
 					<img src="images/logo.svg" alt="" class="logo">
 					<nav class="navigation">
 						<ul class="list">
 							<li class="list__item">
-								<a href="#" class="list__link">О нас</a>
+								<a href="#" data-scroll-to="benefits" class="list__link">О нас</a>
 							</li>
 							<li class="list__item">
-								<a href="#" class="list__link">Наушники</a>
+								<a href="#" data-scroll-to="price" class="list__link">Наушники</a>
 							</li>
 							<li class="list__item">
-								<a href="#" class="list__link">Команда</a>
+								<a href="#" data-scroll-to="team" class="list__link">Команда</a>
 							</li>
 							<li class="list__item">
-								<a href="#" class="list__link">Цвета</a>
+								<a href="#" data-scroll-to="products" class="list__link">Цвета</a>
 							</li>
 							<li class="list__item">
-								<a href="#" class="list__link">Отзывы</a>
+								<a href="#" data-scroll-to="reviews" class="list__link">Отзывы</a>
 							</li>
 							<li class="list__item">
-								<a href="#" class="list__link">Как мы работаем</a>
+								<a href="#" data-scroll-to="video" class="list__link">Как мы работаем</a>
 							</li>
 							<li class="list__item">
-								<a href="#" class="list__link">Контакты</a>
+								<a href="#" data-scroll-to="footer" class="list__link">Контакты</a>
 							</li>
 						</ul>
 					</nav>
@@ -68,7 +68,7 @@
 							Встречайте новую версию наушников 
 							из линейки Powerbeats.
 						</p>
-						<button class="hero__button">ЗАКАЗАТЬ</button>
+						<button data-scroll-to="form" class="hero__button">ЗАКАЗАТЬ</button>
 					
 				</div>
 					<div class="img__wrap">
@@ -95,7 +95,7 @@
 			</div>
 		</section>
 
-			<section class="section">
+			<section data-section-id="benefits" class="section">
 				<div class="container">
 					<div class="headline">
 					<h2 class="section__title headline__title">почему beats solo 3?</h2>
@@ -160,7 +160,7 @@
 				</div>
 			</section>
 		 	 
-			<section class="price">
+			<section data-section-id="price" class="price">
 				<div class="container">
 
 					
@@ -547,7 +547,7 @@
 				</a>	
 			</section>
 			
-			<section class="team">
+			<section data-section-id="team" class="team">
 				<div class="container">
 					<h2 class="title__team">команда</h2>
 					<div class="main__team">
@@ -685,7 +685,7 @@
 	
 			</section>
 
-			<section class="section products-menu-section">
+			<section data-section-id="products" class="section products-menu-section">
 				<!-- <div class="container"> -->
 					<h2 class="section__title products-menu-section__title">цвета</h2>
 					<ul class="products-menu">
@@ -729,7 +729,7 @@
 				<!-- </div> -->
 			</section>
 
-			<section class="section__reviews">
+			<section data-section-id="reviews" class="section__reviews">
 				<div class="container">
 					<h2 class="reviews__title">Отзывы</h2>
 					<div class="reviews__subinfo">
@@ -781,7 +781,7 @@
 			
 			</section>
 			
-			<section class="video player-section">
+			<section data-section-id="video" class="video player-section">
 				<div class="container">
 				  <h2 class="section__title">Как мы работаем</h2>
 				  <div class="player-section__container">
@@ -805,7 +805,7 @@
 				</div>
 			  </section>
 
-			<section class="section__form">
+			<section data-section-id="form" class="section__form">
 				<div class="container">
 					<h2 class="section__title-form">закажите доставку</h2>
 					<form class="form">
@@ -880,12 +880,12 @@
 					</form>
 				</div>
 			</section>		
-			 <section class="map">
+			 <section data-section-id="map" class="map">
 					
 				<div style="position:relative;" id="map"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/geo/ulitsa_novy_arbat/10050646/?ll=37.586866%2C55.752768&utm_medium=mapframe&utm_source=maps&z=16.2" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Новый Арбат — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU5JQtZsA" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
 			</section> 
 
-			 <footer class="footer">
+			 <footer data-section-id="footer" class="footer">
 				<div class="container">
 					<div class="footer__wrapper">
 					<address class="contacts">
@@ -927,31 +927,34 @@
 
 			<ul class="hero__dots">
 				<li class="hero__dots-item active">
-					<button class="button__dots "></button>
+					<button data-scroll-to="hero" class="button__dots "></button>
 				</li>
 				<li class="hero__dots-item">
-					<button class="button__dots"></button>
+					<button data-scroll-to="benefits" class="button__dots"></button>
 				</li>
 				<li class="hero__dots-item">
-					<button class="button__dots"></button>
+					<button data-scroll-to="price" class="button__dots"></button>
 				</li>
 				<li class="hero__dots-item">
-					<button class="button__dots"></button>
+					<button data-scroll-to="team" class="button__dots"></button>
 				</li>
 				<li class="hero__dots-item">
-					<button class="button__dots"></button>
+					<button data-scroll-to="products" class="button__dots"></button>
 				</li>
 				<li class="hero__dots-item">
-					<button class="button__dots"></button>
+					<button data-scroll-to="reviews" class="button__dots"></button>
 				</li>
 				<li class="hero__dots-item">
-					<button class="button__dots"></button>
+					<button data-scroll-to="video" class="button__dots"></button>
 				</li>
 				<li class="hero__dots-item">
-					<button class="button__dots"></button>
+					<button data-scroll-to="form" class="button__dots"></button>
 				</li>
 				<li class="hero__dots-item">
-					<button class="button__dots"></button>
+					<button data-scroll-to="map" class="button__dots"></button>
+				</li>
+				<li class="hero__dots-item">
+					<button data-scroll-to="footer" class="button__dots"></button>
 				</li>
 			</ul>
 					
@@ -973,6 +976,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js" integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
 	<script src="https://www.youtube.com/iframe_api"></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
 	<script src="js/main.js" defer></script>
 
 </html>

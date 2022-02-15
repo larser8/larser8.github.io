@@ -247,16 +247,16 @@ $(".products-menu__title").on("click", e => {
 
                       //MAP MARKER
 
-// let myMap;
+let myMap;
 
-// const init = () => {
-//   myMap = new ymaps.Map("map", {
-//     center: [55.76, 37.64],
-//     zoom: 7
-//   });
-// }
+const init = () => {
+  myMap = new ymaps.Map("map", {
+    center: [55.76, 37.64],
+    zoom: 7
+  });
+}
 
-// ymaps.ready(init);
+ymaps.ready(init);
 
 
 
@@ -267,57 +267,140 @@ $(".products-menu__title").on("click", e => {
 
 const sections = $("section");
 const display = $(".maincontent");
+const sideMenu = $(".fixed-menu");
+
+const mobileDetect = new mobileDetect(window.navigator.userAgent);
+const isMobile = MobileDetect.mobile();
 
 let inScroll = false;
 
 sections.first().addClass("active");
 
+const countSectionPosition = sectionEq => {
+  const position = sectionEq * -100;
+
+  if (isNaN(position)) {
+    console.error("передано не верное значение в countSectionPosition");
+    return 0;
+
+  }
+
+   return position;
+}
+
+const resetActiveClassForItem = (items, itemEq, activeClass) => {
+  items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+}
+
 const performTransition = (sectionEq) => {
 
-  if (inScroll === false) {
+  if (inScroll) return;
+
+    const transitionOver = 1000;
+    const mouseInertiaOver = 300;
+
     inScroll = true;
-    const position = sectionEq * -100;
+    const position = countSectionPosition(sectionEq); 
 
     display.css({
       transform: `translateY(${position}%)`
     });
-  
-    sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
+
+    resetActiveClassForItem(sections, sectionEq, "active");
     
     setTimeout(() => {
       inScroll = false;
+      resetActiveClassForItem(sectionEq, "active");
 
-    }, 1300);
-  }
+    }, transitionOver + mouseInertiaOver );
 };
 
-const scrollViewport = (direction) => {
+const viewportScroller = () => {
   const activeSection = sections.filter(".active");
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
 
+  return {
+    next() {
+      
+      if (nextSection.length) {
+        performTransition(nextSection.index());
+      }
 
-  if (direction === "next" && nextSection.length) {
-    performTransition(nextSection.index());
-  }
+    },
+    prev() {
 
-  if (direction === "prev"  && prevSection.length) {
-    performTransition(prevSection.index());
-  }
-}
+      if (prevSection.length) {
+        performTransition(prevSection.index());
+      }
+    },
+  };  
+};
 
 $(window).on("wheel", e => {
   const deltaY = e.originalEvent.deltaY;
+  const scroller = viewportScroller(); 
 
   if (deltaY > 0) {
-    performTransition(2);
-    scrollViewport("next");
+    scroller.next();
   }
 
   if (deltaY < 0) {
-    scrollViewport("prev");
+    scroller.prev();
   }
 });
+
+$(window).on("keydown", e => {
+  const tagName = e.target.tagName.toLowerCase();
+  const userTypingInInputs = tagName === "input" || tagName === "textarea";
+  const scroller = viewportScroller();
+
+  if (userTypingInInputs) return;
+
+    switch (e.keyCode) {
+      case 38: //prev
+      scroller.prev();
+      break;
+  
+      case 40: //next
+      scroller.next();
+      break;
+  
+    }
+  
+});
+
+$(".wrapper").on("touchmove", e => e.preventDefault());
+
+$("[data-scroll-to]").click(e => {
+  e.preventDefault();
+
+  const $this = $(e.currentTarget);
+  const target = $this.attr("data-scroll-to");
+  const reqSection = $(`[data-section-id=${target}]`);
+
+ performTransition(reqSection.index());
+});
+
+                        //OPS MOBILE
+
+
+if (isMobile){
+
+  //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+$("body").swipe({
+  swipe:function (event, direction) {
+    const scroller = viewportScroller();
+    let scrollDirection = "";
+
+    if (direction === "up") scrollDirection = "next"
+    if (direction === "down") scrollDirection = "prev" 
+
+     scroller[scrollDirection]();
+   },
+ });
+}
+
 
        
 
