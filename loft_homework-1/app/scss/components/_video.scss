@@ -16,6 +16,38 @@
     left: 0;
     right: 0;
     bottom: 0;
+
+    &.active .player__splash{
+        display: none;
+    }
+
+    &.paused{
+        .player__start{
+            width: 14px;
+            height: 14px;
+            border: none;
+
+
+            &:after,
+            &:before{
+                content: "";
+                display: block;
+                position: absolute;
+                width: 5px;
+                top: 0;
+                bottom: 0;
+                background: #626262;
+            }
+
+            &:after{
+                right: 0;
+            }
+
+            &:before{
+                left: 0;
+            }
+        }
+    }
 }
 
 .player__controls{

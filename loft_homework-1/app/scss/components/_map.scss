@@ -1,19 +1,5 @@
-.map{
+#map{
     max-width: 100%;
     overflow: hidden;
     height: 100vh;
-    iframe{
-        width: 100%;
-        height: 100vh;
-        
-
-        @include media('>=tablet') {
-            // здесь будут стили 768 - 1024
-           
-        }
-    
-        @include media('<=xs-phone') {
-            // здесь будут стили 768 - 1024
-        }
-    }
 }

@@ -251,9 +251,32 @@ let myMap;
 
 const init = () => {
   myMap = new ymaps.Map("map", {
-    center: [55.76, 37.64],
-    zoom: 7
+    center: [55.751799, 37.587983],
+    zoom: 11,
+    controls: []
   });
+
+  const coords = [
+    [55.753476, 37.584695],
+    [55.754626, 37.591879],
+    [55.750390, 37.588969],
+    [55.750892, 37.598814]
+  ];
+
+  const myCollection = new ymaps.GeoObjectCollection({}, {
+    draggable: false,
+    iconLayout: 'default#image',
+    iconImageHref: "../images/marker.svg",
+    iconImageSize: [46, 57],
+    iconImageOffset: [-35, -52]   
+  });
+  
+  coords.forEach(coord => {
+    myCollection.add(new ymaps.Placemark(coord));
+  });
+
+  myMap.geoObjects.add(myCollection);
+
 }
 
 ymaps.ready(init);
@@ -269,8 +292,8 @@ const sections = $("section");
 const display = $(".maincontent");
 const sideMenu = $(".fixed-menu");
 
-const mobileDetect = new mobileDetect(window.navigator.userAgent);
-const isMobile = MobileDetect.mobile();
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
 
 let inScroll = false;
 
@@ -286,7 +309,7 @@ const countSectionPosition = sectionEq => {
   }
 
    return position;
-}
+};
 
 const resetActiveClassForItem = (items, itemEq, activeClass) => {
   items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
