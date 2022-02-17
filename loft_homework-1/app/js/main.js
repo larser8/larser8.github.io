@@ -279,8 +279,8 @@ const init = () => {
 
 }
 
-ymaps.ready(init);
 
+// ymaps.ready(init);
 
 
 
@@ -300,7 +300,7 @@ let inScroll = false;
 sections.first().addClass("active");
 
 const countSectionPosition = sectionEq => {
-  const position = sectionEq * -100;
+  const position = sectionEq * -125;
 
   if (isNaN(position)) {
     console.error("передано не верное значение в countSectionPosition");
@@ -312,6 +312,7 @@ const countSectionPosition = sectionEq => {
 };
 
 const resetActiveClassForItem = (items, itemEq, activeClass) => {
+  console.log(items.eq(itemEq))
   items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
 }
 
@@ -422,7 +423,115 @@ $("body").swipe({
      scroller[scrollDirection]();
    },
  });
-}
+};
+
+
+                                //Youtube API
+      
+  let player;
+  const playerContainer = $('.player');
+
+  let eventsInit = () => {
+    $(".player__start").click(e => {
+      e.preventDefault();
+
+      if (playerContainer.hasClass("paused")) {
+        player.pauseVideo();
+      } else {
+        player.playVideo();
+      }
+   });
+
+   $(".player__playback").click(e => {
+     const bar = $(e.currentTarget);
+     const clickedPosition = e.originalEvent.layerX;
+     const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+     const newPlaybackPositionSec = 
+          (player.getDuration() / 100) * newButtonPositionPercent;
+
+     $(".player__playback-button").css({
+       left: `${newButtonPositionPercent}%`
+     });
+    
+     player.seekTo(newPlaybackPositionSec);
+   });
+
+   $(".player__splash").click(e => {
+     player.playVideo();
+   })
+};
+
+const formatTime = timeSec => {
+  const roundTime = Math.round(timeSec);
+
+  const minutes = addZero(Math.floor(roundTime / 60));
+  const seconds = addZero(roundTime - minutes * 60);
+
+  function addZero(num) {
+    return num < 10 ? `0${num}` : num;
+  }
+
+  return `${minutes} : ${seconds}`;
+
+} 
+
+const onPlayerReady = () => {
+  let interval;
+  const durationSec = player.getDuration();
+  
+  $(".player__duration-estimate").text(formatTime(durationSec));
+
+  if (typeof interval != 'undefined') {
+    clearInterval(interval);
+  }
+
+  interval = setInterval(() => {
+    const completedSec = player.getCurrentTime();
+    const completedPercent = (completedSec / durationSec) * 100;
+
+    $(".player__playback-button").css({
+      left: `${completedPercent}%`
+    });
+
+    $(".player__duration-completed").text(formatTime(completedSec));
+  }, 1000);
+};
+
+const onPlayerStateChange = event => {
+  switch (event.data) {
+    case 1:
+      playerContainer.addClass("active");
+      playerContainer.addClass("paused");
+      break;
+
+    case 2:
+      playerContainer.removeClass("active");
+      playerContainer.removeClass("paused");
+      break;
+  }
+};
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player("yt-player", {
+        height: '400',
+        width: '660',
+        videoId: "oqeW9YMHweo",
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange
+        },
+        playerVars: {
+          controls: 0,
+          disablekb: 0,
+          showinfo: 0,
+          rel: 0,
+          autoplay: 0,
+          modestbranding: 0
+        }
+      });
+    }
+
+    eventsInit();
 
 
        
